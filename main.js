@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
+import chalk from "chalk";
+console.log(chalk.underline.bold.bgRed("==============================>>Welcome to my To-Do list App<<=================================="));
 let todos = [];
 let condition = true;
 while (condition) {
@@ -18,6 +20,6 @@ while (condition) {
     ]);
     todos.push(addTask.todo);
     condition = addTask.addmore;
-    console.log(todos);
+    console.log(chalk.bold.yellow(todos));
 }
 ;

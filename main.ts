@@ -2,6 +2,8 @@
 
 import inquirer from "inquirer"
 import chalk from "chalk"
+console.log(chalk.underline.bold.bgRed("==============================>>Welcome to my To-Do list App<<=================================="));
+
 let todos : string[] = [];
 let condition : boolean = true;
 
@@ -24,6 +26,6 @@ let addTask = await inquirer.prompt(
 
 todos.push(addTask.todo);
 condition =addTask.addmore;
-console.log(todos);
+console.log(chalk.bold.yellow(todos));
 
 };
